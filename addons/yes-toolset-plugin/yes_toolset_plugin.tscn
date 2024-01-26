@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6n8p63v6kfds"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ycfi"]
+bg_color = Color(0.286275, 0.0862745, 0.509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.552941, 0.117647, 0.733333, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[node name="YesToolsetPlugin" type="Control"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "YES TOOLSET PLUGIN"
+horizontal_alignment = 1
+
+[node name="Separator" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="SingleGridAlign" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Wyrównaj obiekt do siatki"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Position" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Pozycja:"
+horizontal_alignment = 1
+
+[node name="Position2" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "....."
+horizontal_alignment = 1
+
+[node name="FixAlign" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ycfi")
+text = "Wyrównaj kąt obiektu do 22.5 stopnia:"
+
+[node name="Separator2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="SgnleAngleAlign" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Wybierz tutaj rodzina, którego dzieci chcesz wyrównać:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Rotation" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Pozycja:"
+horizontal_alignment = 1
+
+[node name="Rotation2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "....."
+horizontal_alignment = 1

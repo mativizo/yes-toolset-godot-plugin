@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://xdwswlnpfmxd"]
+
+[ext_resource type="Script" path="res://addons/yes-toolset-plugin/yes_grid.gd" id="1_q2bf3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_88tkl"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 5, 5)
+mesh = SubResource("BoxMesh_88tkl")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_constants/outline_size = 2
+flat = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+mesh = SubResource("BoxMesh_88tkl")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = SubResource("BoxMesh_88tkl")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = SubResource("BoxMesh_88tkl")
+skeleton = NodePath("../..")
+
+[node name="YesGrid" type="Node3D" parent="."]
+script = ExtResource("1_q2bf3")
